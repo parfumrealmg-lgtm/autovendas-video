@@ -15,6 +15,7 @@ import { NextLogo } from "./MyComp/NextLogo";
 import { PromoReels } from "./AutoVendas/PromoReels";
 import { Features } from "./AutoVendas/Features";
 import { Depoimento } from "./AutoVendas/Depoimento";
+import { Lancamento } from "./AutoVendas/Lancamento";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -68,6 +69,16 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
         defaultProps={defaultDepoimentoProps}
+      />
+      {/* AutoVendas IA — Vídeo de Lançamento (1280x720 landscape, 20s) */}
+      <Composition
+        id="Lancamento"
+        component={Lancamento}
+        durationInFrames={600}
+        fps={30}
+        width={1280}
+        height={720}
+        defaultProps={{}}
       />
     </>
   );
