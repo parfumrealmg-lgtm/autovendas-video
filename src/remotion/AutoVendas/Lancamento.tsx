@@ -1,5 +1,6 @@
 import { fontFamily, loadFont } from "@remotion/google-fonts/Inter";
 import React from "react";
+import { LogoBrand } from "./LogoBrand";
 import {
   AbsoluteFill,
   Sequence,
@@ -113,10 +114,9 @@ function SceneLogo() {
   return (
     <AbsoluteFill style={{ justifyContent: "center", alignItems: "center" }}>
       <div style={{ transform: `scale(${s})`, textAlign: "center" }}>
-        <span style={{ fontSize: 72, fontWeight: 900, color: ROXO_CLARO, letterSpacing: "-0.03em" }}>AutoVendas</span>
-        <span style={{ fontSize: 72, fontWeight: 900, color: "white" }}>IA</span>
+        <LogoBrand iconSize={80} fontSize={72} gap={20} />
       </div>
-      <div style={{ position: "absolute", top: "58%", width: line, height: 3, background: `linear-gradient(90deg, transparent, ${ROXO}, transparent)`, borderRadius: 2 }} />
+      <div style={{ position: "absolute", top: "60%", width: line, height: 3, background: `linear-gradient(90deg, transparent, ${ROXO}, transparent)`, borderRadius: 2 }} />
     </AbsoluteFill>
   );
 }
@@ -242,9 +242,8 @@ function SceneLogoFinal() {
   return (
     <AbsoluteFill style={{ justifyContent: "center", alignItems: "center" }}>
       <div style={{ textAlign: "center", opacity: a, transform: `scale(${a})` }}>
-        <div style={{ marginBottom: 16 }}>
-          <span style={{ fontSize: 56, fontWeight: 900, color: ROXO_CLARO }}>AutoVendas</span>
-          <span style={{ fontSize: 56, fontWeight: 900, color: "white" }}>IA</span>
+        <div style={{ marginBottom: 20 }}>
+          <LogoBrand iconSize={64} fontSize={56} gap={16} />
         </div>
         <p style={{ fontSize: 20, color: "#6a6a8a", letterSpacing: "0.05em" }}>autovendas-ia.vercel.app</p>
       </div>

@@ -1,5 +1,6 @@
 import { fontFamily, loadFont } from "@remotion/google-fonts/Inter";
 import React from "react";
+import { LogoBrand } from "./LogoBrand";
 import {
   AbsoluteFill,
   Sequence,
@@ -67,8 +68,7 @@ export const Depoimento: React.FC<z.infer<typeof DepoimentoProps>> = ({
             const logoIn = spring({ fps, frame, durationInFrames: 20, config: { damping: 80 } });
             return (
               <div style={{ opacity: logoIn }}>
-                <span style={{ fontSize: 28, fontWeight: 900, color: ROXO_CLARO }}>AutoVendas</span>
-                <span style={{ fontSize: 28, fontWeight: 900, color: "white" }}>IA</span>
+                <LogoBrand iconSize={32} fontSize={28} gap={10} />
               </div>
             );
           })()}

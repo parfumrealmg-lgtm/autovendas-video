@@ -1,5 +1,6 @@
 import { fontFamily, loadFont } from "@remotion/google-fonts/Inter";
 import React from "react";
+import { LogoBrand } from "./LogoBrand";
 import {
   AbsoluteFill,
   Sequence,
@@ -62,31 +63,8 @@ export const PromoReels: React.FC<z.infer<typeof PromoReelsProps>> = ({
             paddingTop: 180,
           }}
         >
-          <div
-            style={{
-              transform: `scale(${logoIn})`,
-              opacity: logoIn,
-            }}
-          >
-            <span
-              style={{
-                fontSize: 48,
-                fontWeight: 900,
-                color: ROXO_CLARO,
-                letterSpacing: "-0.03em",
-              }}
-            >
-              AutoVendas
-            </span>
-            <span
-              style={{
-                fontSize: 48,
-                fontWeight: 900,
-                color: "white",
-              }}
-            >
-              IA
-            </span>
+          <div style={{ transform: `scale(${logoIn})`, opacity: logoIn }}>
+            <LogoBrand iconSize={56} fontSize={48} gap={14} />
           </div>
         </AbsoluteFill>
       </Sequence>

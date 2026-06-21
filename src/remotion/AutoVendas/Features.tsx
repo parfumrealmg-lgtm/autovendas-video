@@ -1,5 +1,6 @@
 import { fontFamily, loadFont } from "@remotion/google-fonts/Inter";
 import React from "react";
+import { LogoBrand } from "./LogoBrand";
 import {
   AbsoluteFill,
   Sequence,
@@ -148,16 +149,8 @@ export const Features: React.FC<z.infer<typeof FeaturesProps>> = ({
           {(() => {
             const footIn = spring({ fps, frame: frame - 80, durationInFrames: 25, config: { damping: 80 } });
             return (
-              <div
-                style={{
-                  fontSize: 20,
-                  color: ROXO_CLARO,
-                  opacity: footIn,
-                  fontWeight: 700,
-                  letterSpacing: "0.03em",
-                }}
-              >
-                AutoVendasIA.com
+              <div style={{ opacity: footIn }}>
+                <LogoBrand iconSize={28} fontSize={20} gap={10} />
               </div>
             );
           })()}
