@@ -16,6 +16,9 @@ import { PromoReels } from "./AutoVendas/PromoReels";
 import { Features } from "./AutoVendas/Features";
 import { Depoimento } from "./AutoVendas/Depoimento";
 import { Lancamento } from "./AutoVendas/Lancamento";
+import { LancamentoVertical } from "./AutoVendas/LancamentoVertical";
+import { VideoAntesDepois } from "./AutoVendas/VideoAntesDepois";
+import { VideoDor } from "./AutoVendas/VideoDor";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -78,6 +81,36 @@ export const RemotionRoot: React.FC = () => {
         fps={30}
         width={1280}
         height={720}
+        defaultProps={{}}
+      />
+      {/* AutoVendas IA — Lançamento Vertical (1080x1920, 20s) */}
+      <Composition
+        id="LancamentoVertical"
+        component={LancamentoVertical}
+        durationInFrames={600}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{}}
+      />
+      {/* Antes vs Depois (1080x1920, 12s) */}
+      <Composition
+        id="VideoAntesDepois"
+        component={VideoAntesDepois}
+        durationInFrames={360}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{}}
+      />
+      {/* Dor do público (1080x1920, 12s) */}
+      <Composition
+        id="VideoDor"
+        component={VideoDor}
+        durationInFrames={360}
+        fps={30}
+        width={1080}
+        height={1920}
         defaultProps={{}}
       />
     </>
